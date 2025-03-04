@@ -1782,6 +1782,7 @@ html {
     }
     .col-sm-12 {
       width: 100%;
+      margin-bottom: 10%;
     }
     .col-sm-11 {
       width: 91.66666667%;

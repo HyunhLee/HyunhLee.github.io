@@ -164,7 +164,7 @@
 }
 
 /* =========================== atc04 */
-#atc04{position:relative;z-index:0;width:100%;height:392px;margin:-93px auto 0;text-align:center;background:url(../img/main/inc04/inc04_bg.jpg) left no-repeat;background-size:cover}
+#atc04{position:relative;z-index:0;width:100%;height:1092px;margin:-93px auto 0;text-align:center;background:url(../img/main/inc04/inc04_bg.jpg) left no-repeat;background-size:cover}
 #atc04 .tit{padding-top:175px;font-size:48px;line-height:45px;font-weight:200;font-family:'Poppins';color:#fff}
 #atc04 .txt{padding-top:23px;font-size:14px;color:rgba(255,255,255,.7)}
 #atc04 .more{width:86px;margin:0 auto;padding-top:33px}
