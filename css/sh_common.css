@@ -123,7 +123,7 @@ background:linear-gradient(360deg, rgba(118,76,162,1) 0%, rgba(102,126,234,1) 10
 #sh_aside{position:relative;width:100%;max-width:1200px;margin:-25px auto 0;text-align:center;background-color:transparent}
 
 /* =========================== MAIN */
-#sh_section{position:relative;width:100%;padding-top:135px}
+#sh_section{position:relative;width:100%;}
 #sh_section .grid{position:absolute;left:50%;top:0;transform:translateX(-50%);width:1200px;height:100%}
 #sh_section .grid span{position:absolute;left:0;top:0;bottom:0;width:1px;background-color:#e1e1e1}
 #sh_section .grid span:nth-child(2){left:25%}

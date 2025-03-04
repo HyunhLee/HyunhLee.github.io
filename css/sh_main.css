@@ -21,7 +21,7 @@
 #sh_main_banner .sh_txt_box{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;padding-top:330px;text-align:center}
 #sh_main_banner .sh_txt_box .move_txt01{margin-top:-25px;font-size:80px;color:#fff;font-weight:100;letter-spacing:-0.2px;opacity:0;font-family:'Poppins'}
 #sh_main_banner .sh_txt_box .move_txt01 b{font-weight:700}
-#sh_main_banner .sh_txt_box .move_txt02{white-space:pre-line;margin:30px 0 42px;font-size:15px;line-height:23px;color:rgba(255,255,255,.6);font-weight:300;letter-spacing:-0.1px;opacity:0;font-family:'Poppins'}
+#sh_main_banner .sh_txt_box .move_txt02{white-space:pre-line;margin:30px 0 20px;font-size:15px;line-height:23px;color:rgba(255,255,255,.6);font-weight:300;letter-spacing:-0.1px;opacity:0;font-family:'Poppins'}
 #sh_main_banner .swiper-pager{opacity:0}
 #sh_main_banner .swiper-pager span{opacity:1;width:11px;height:11px;border:1px solid rgba(255,255,255,.7);background:none}
 #sh_main_banner .swiper-pager span+span{margin-left:10px}
