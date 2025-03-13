@@ -29,7 +29,7 @@
 	$("#allWrap .mn_img>li").hover(function(){
 		var num = $(this).index()+1;
 		if($(".right_img img").data("num")!=num){
-			$(".right_img img").css('opacity','0').stop().attr("src","/sh_img/hd/top_menu/all_bg0"+num+".jpg").animate({opacity:1},500).data("num",num);
+			$(".right_img img").css('opacity','0').stop().attr("src","sh_img/hd/top_menu/all_bg0"+num+".jpg").animate({opacity:1},500).data("num",num);
 		}
 	})
 });
