@@ -9,6 +9,7 @@
 #atc07 .gall_area{position:relative}
 #atc07 .gall_area:after{position:absolute;content:'';z-index:-1;bottom:0;right:0;width:1px;height:100%;background:#e1e1e1}
 #atc07 .gall_area .incrute-container{width:100%;margin:0}
+#atc07 .gall_area .incrute-wrapper{display: flex;}
 #atc07 .gall_area ul li{overflow:hidden;width:610px;background:center no-repeat;background-size:cover}
 #atc07 .gall_area ul .img_area{overflow:hidden;width:410px;height:360px}
 #atc07 .gall_area ul .img_area img{transition:all .8s var(--ani);width:100%}
