@@ -154,7 +154,7 @@
 	font-style: normal;
 }
 </style><!--[if lte IE 8]>
-<script src="https://co1096.shiningcorp.com/js/html5.js"></script>
+<script src="/js/html5.js"></script>
 <![endif]-->
 <script>
 // 자바스크립트에서 사용하는 전역변수 선언
@@ -168,12 +168,12 @@ var g5_sca       = "";
 var g5_editor    = "";
 var g5_cookie_domain = "";
 </script>
-<script src="https://co1096.shiningcorp.com/js/jquery-1.8.3.min.js"></script>
-<script src="https://co1096.shiningcorp.com/js/jquery-ui.js"></script>
-<script src="https://co1096.shiningcorp.com/js/jquery.menu.js"></script>
-<script src="https://co1096.shiningcorp.com/js/common.js"></script>
-<script src="https://co1096.shiningcorp.com/js/wrest.js"></script>
-<script src="https://co1096.shiningcorp.com/js/placeholders.min.js"></script>
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/jquery.menu.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/wrest.js"></script>
+<script src="/js/placeholders.min.js"></script>
 <link rel="stylesheet" href="/js/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
