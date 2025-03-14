@@ -5,10 +5,10 @@
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <title>샤이닝 - 기업 홈페이지 샘플</title>
-<link rel="stylesheet" href="https://co1096.shiningcorp.com/css/default.css">
-<link rel="stylesheet" href="https://co1096.shiningcorp.com/admin/css/admin_mode.css">
-<link rel="stylesheet" href="https://co1096.shiningcorp.com/css/user.css">
-<link rel="stylesheet" href="https://co1096.shiningcorp.com/css/page_style.css">
+<link rel="stylesheet" href="/css/default.css">
+<link rel="stylesheet" href="/admin/css/admin_mode.css">
+<link rel="stylesheet" href="/css/user.css">
+<link rel="stylesheet" href="/css/page_style.css">
 <style>
 @import url(https:https://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(https:https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
@@ -174,7 +174,7 @@ var g5_cookie_domain = "";
 <script src="https://co1096.shiningcorp.com/js/common.js"></script>
 <script src="https://co1096.shiningcorp.com/js/wrest.js"></script>
 <script src="https://co1096.shiningcorp.com/js/placeholders.min.js"></script>
-<link rel="stylesheet" href="https://co1096.shiningcorp.com/js/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/js/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <style>
