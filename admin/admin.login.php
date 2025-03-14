@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<title>샤이닝 - 기업 홈페이지 샘플</title>
+<title>발해 - 샘플</title>
 <link rel="stylesheet" href="/css/default.css">
 <link rel="stylesheet" href="/admin/css/admin_mode.css">
 <link rel="stylesheet" href="/css/user.css">
@@ -158,8 +158,8 @@
 <![endif]-->
 <script>
 // 자바스크립트에서 사용하는 전역변수 선언
-var g5_url       = "https://co1096.shiningcorp.com";
-var g5_bbs_url   = "https://co1096.shiningcorp.com/bbs";
+var g5_url       = "https://hyunhlee.github.io";
+var g5_bbs_url   = "https://hyunhlee.github.io/bbs";
 var g5_is_member = "";
 var g5_is_admin  = "";
 var g5_is_mobile = "";
@@ -177,16 +177,6 @@ var g5_cookie_domain = "";
 <link rel="stylesheet" href="/js/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<style>
-/* 디자인샘플 보러가기 */
-#goToDesign{position:fixed;z-index:100;width:100%;padding:7px 0;border-bottom:1px solid #fff073;font-size:12px;text-align:center;background-color:#fffbd9;font-family:dotum} 
-#goToDesign a{padding-left:10px;font-weight:bold;color:#f96319}
-#goToDesign a:hover{text-decoration:underline}
-</style>
-
-<!-- 디자인샘플 보러가기 { -->
-<div id="goToDesign">보고계신 사이트는 <b>디자인샘플</b> 사이트 입니다. <b>다른 디자인</b>을 원하실 경우 오른쪽 링크를 클릭하세요. <a target="_blank" href="http://www.hdweb.co.kr/sh_page/design.html">디자인샘플 보러가기</a></div>
-<!-- } -->
 
 <meta charset="utf-8">
 <!-- placeholder 익스 하위버전 대응 -->
