@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<title>발해 - 샘플</title>
+<title>발해 - 홈페이지 샘플</title>
 <link rel="stylesheet" href="/css/default.css">
 <link rel="stylesheet" href="/admin/css/admin_mode.css">
 <link rel="stylesheet" href="/css/user.css">
