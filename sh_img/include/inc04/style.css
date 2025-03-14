@@ -8,12 +8,13 @@
 #atc04 .cont_area .tit span{margin-left:20px;vertical-align:11px}
 #atc04 .gall_area{position:relative}
 #atc04 .gall_area:after{position:absolute;content:'';z-index:-1;bottom:0;right:0;width:1px;height:100%;background:#e1e1e1}
-#atc04 .gall_area .swiper-container{width:90%;margin:0}
-#atc04 .gall_area ul li{overflow:hidden;width:410px;background:center no-repeat;background-size:cover}
+#atc04 .gall_area .swiper-container{width:100%;margin:0}
+#atc04 .gall_area ul li{overflow:hidden;width:610px;background:center no-repeat;background-size:cover}
 #atc04 .gall_area ul .img_area{overflow:hidden;width:410px;height:360px}
-#atc04 .gall_area ul .img_area img{transition:all .8s var(--ani)}
+#atc04 .gall_area ul .img_area img{transition:all .8s var(--ani);width:100%}
 #atc04 .gall_area ul li a:hover .img_area img{transform:scale(1.15)}
-#atc04 .gall_area ul li .txt{padding:30px}
+#atc04 .gall_area ul li .txt{padding:30px;background-color: var(--primary);}
+#atc04 .gall_area ul li h2{color:#fff}
 #atc04 .gall_area ul li .txt em{font-size:15px;font-weight:700;font-style:normal;color:var(--primary);letter-spacing:0;font-family:'Poppins'}
-#atc04 .gall_area ul li .txt p{padding:25px 0 15px;font-size:20px;color:#222;font-family:'notokr-medium'}
+#atc04 .gall_area ul li .txt p{padding:25px 0 15px;font-size:17px;color:#fff;font-family:'notokr-medium'}
 #atc04 .gall_area ul li .txt span{font-size:14px;font-weight:600;color:#aaa;letter-spacing:0;font-family:'Poppins'}
