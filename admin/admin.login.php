@@ -28,68 +28,68 @@
 /* 본고딕 */
 @font-face {
 	font-family: 'notokr-thin';
-	src: url(https://font.shiningcorp.com/css/font/notokr-thin.eot);
-	src: url(https://font.shiningcorp.com/css/font/notokr-thin.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/notokr-thin.woff2) format('woff2'),
-		 url(https://font.shiningcorp.com/css/font/notokr-thin.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/notokr-thin.ttf) format('truetype'),
-		 url(https://font.shiningcorp.com/css/font/notokr-thin.svg#notokr-thin) format('svg');
+	src: url(https://font/notokr-thin.eot);
+	src: url(https://font/notokr-thin.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/notokr-thin.woff2) format('woff2'),
+		 url(https://font/notokr-thin.woff) format('woff'),
+		 url(https://font/notokr-thin.ttf) format('truetype'),
+		 url(https://font/notokr-thin.svg#notokr-thin) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
     font-family: 'notokr-regular';
-    src: url(https://font.shiningcorp.com/css/font/notokr-regular.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-regular.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-regular.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-regular.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-regular.svg#notokr-regular) format('svg');
+    src: url(https://font/notokr-regular.eot);
+    src: url(https://font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-regular.woff2) format('woff2'),
+         url(https://font/notokr-regular.woff) format('woff'),
+         url(https://font/notokr-regular.svg#notokr-regular) format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'notokr-medium';
-    src: url(https://font.shiningcorp.com/css/font/notokr-medium.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-medium.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-medium.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-medium.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-medium.svg#notokr-medium) format('svg');
+    src: url(https://font/notokr-medium.eot);
+    src: url(https://font/notokr-medium.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-medium.woff2) format('woff2'),
+         url(https://font/notokr-medium.woff) format('woff'),
+         url(https://font/notokr-medium.svg#notokr-medium) format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'notokr-light';
-    src: url(https://font.shiningcorp.com/css/font/notokr-light.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-light.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-light.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-light.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-light.ttf) format('truetype'),
-         url(https://font.shiningcorp.com/css/font/notokr-light.svg#notokr-light) format('svg');
+    src: url(https://font/notokr-light.eot);
+    src: url(https://font/notokr-light.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-light.woff2) format('woff2'),
+         url(https://font/notokr-light.woff) format('woff'),
+         url(https://font/notokr-light.ttf) format('truetype'),
+         url(https://font/notokr-light.svg#notokr-light) format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'notokr-demilight';
-    src: url(https://font.shiningcorp.com/css/font/notokr-demilight.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-demilight.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-demilight.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-demilight.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-demilight.ttf) format('truetype'),
-         url(https://font.shiningcorp.com/css/font/notokr-demilight.svg#notokr-demilight) format('svg');
+    src: url(https://font/notokr-demilight.eot);
+    src: url(https://font/notokr-demilight.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-demilight.woff2) format('woff2'),
+         url(https://font/notokr-demilight.woff) format('woff'),
+         url(https://font/notokr-demilight.ttf) format('truetype'),
+         url(https://font/notokr-demilight.svg#notokr-demilight) format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'notokr-bold';
-    src: url(https://font.shiningcorp.com/css/font/notokr-bold.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-bold.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-bold.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-bold.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-bold.svg#notokr-bold) format('svg');
+    src: url(https://font/notokr-bold.eot);
+    src: url(https://font/notokr-bold.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-bold.woff2) format('woff2'),
+         url(https://font/notokr-bold.woff) format('woff'),
+         url(https://font/notokr-bold.svg#notokr-bold) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -97,12 +97,12 @@
 
 @font-face {
     font-family: 'notokr-black';
-    src: url(https://font.shiningcorp.com/css/font/notokr-black.eot);
-    src: url(https://font.shiningcorp.com/css/font/notokr-black.eot?#iefix) format('embedded-opentype'),
-         url(https://font.shiningcorp.com/css/font/notokr-black.woff2) format('woff2'),
-         url(https://font.shiningcorp.com/css/font/notokr-black.woff) format('woff'),
-         url(https://font.shiningcorp.com/css/font/notokr-black.ttf) format('truetype'),
-         url(https://font.shiningcorp.com/css/font/notokr-black.svg#notokr-black) format('svg');
+    src: url(https://font/notokr-black.eot);
+    src: url(https://font/notokr-black.eot?#iefix) format('embedded-opentype'),
+         url(https://font/notokr-black.woff2) format('woff2'),
+         url(https://font/notokr-black.woff) format('woff'),
+         url(https://font/notokr-black.ttf) format('truetype'),
+         url(https://font/notokr-black.svg#notokr-black) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -110,46 +110,46 @@
 /* 아리따 */
 @font-face {
 	font-family: 'arita-thin';
-	src: url(https://font.shiningcorp.com/css/font/arita-Thin.eot);
-	src: url(https://font.shiningcorp.com/css/font/arita-Thin.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/arita-Thin.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/arita-Thin.ttf) format('truetype');
+	src: url(https://font/arita-Thin.eot);
+	src: url(https://font/arita-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/arita-Thin.woff) format('woff'),
+		 url(https://font/arita-Thin.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'arita-light';
-	src: url(https://font.shiningcorp.com/css/font/arita-Light.eot);
-	src: url(https://font.shiningcorp.com/css/font/arita-Light.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/arita-Light.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/arita-Light.ttf) format('truetype');
+	src: url(https://font/arita-Light.eot);
+	src: url(https://font/arita-Light.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/arita-Light.woff) format('woff'),
+		 url(https://font/arita-Light.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'arita-medium';
-	src: url(https://font.shiningcorp.com/css/font/arita-Medium.eot);
-	src: url(https://font.shiningcorp.com/css/font/arita-Medium.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/arita-Medium.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/arita-Medium.ttf) format('truetype');
+	src: url(https://font/arita-Medium.eot);
+	src: url(https://font/arita-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/arita-Medium.woff) format('woff'),
+		 url(https://font/arita-Medium.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'arita-semibold';
-	src: url(https://font.shiningcorp.com/css/font/arita-SemiBold.eot);
-	src: url(https://font.shiningcorp.com/css/font/arita-SemiBold.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/arita-SemiBold.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/arita-SemiBold.ttf) format('truetype');
+	src: url(https://font/arita-SemiBold.eot);
+	src: url(https://font/arita-SemiBold.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/arita-SemiBold.woff) format('woff'),
+		 url(https://font/arita-SemiBold.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'arita-bold';
-	src: url(https://font.shiningcorp.com/css/font/arita-Bold.eot);
-	src: url(https://font.shiningcorp.com/css/font/arita-Bold.eot?#iefix) format('embedded-opentype'),
-		 url(https://font.shiningcorp.com/css/font/arita-Bold.woff) format('woff'),
-		 url(https://font.shiningcorp.com/css/font/arita-Bold.ttf) format('truetype');
+	src: url(https://font/arita-Bold.eot);
+	src: url(https://font/arita-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(https://font/arita-Bold.woff) format('woff'),
+		 url(https://font/arita-Bold.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
