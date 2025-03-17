@@ -315,13 +315,13 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                 <div id="sh_aside_wrapper">
 <ul id="sh_snb">
         <li class='snb_on' >
-        <a href="#obtain">공공기관 자재 조달</a>
+        <a onclick="scrollToAnchor('#obtain')">공공기관 자재 조달</a>
     </li>
         <li >
-        <a href="#manufacture">화력 발전소 발전기자재 제조</a>
+        <a onclick="scrollToAnchor('#manufacture')">화력 발전소 발전기자재 제조</a>
     </li>
     <li >
-        <a href="#ai">AI 솔루션(MRO & SRM)개발 및 공급</a>
+        <a onclick="scrollToAnchor('#ai')">AI 솔루션(MRO & SRM)개발 및 공급</a>
     </li>
     </ul>
 <!-- 소분류 끝 --></div>
@@ -391,7 +391,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
     </div>
 </div>
 <div id="ai">
-    <div id="pageCm ai" class="p10">
+    <div id="pageCm" class="p10">
         <div class="tit_area t_center">
             <span class="pg_color">production</span>
             <p class="c_black"><strong class="pg_color">Why?</strong> 발해인가</p>
@@ -475,6 +475,18 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
         </div>    
     </div>	
 </div>
+
+<script>
+    function scrollToAnchor(anchor) {
+        let anchor = document.querySelector(anchorI);
+        if(anchor) {
+            anchor.scrollIntoView({
+                behavior: 'smooth',
+                block: 'ceenter'
+            });
+        }
+    }
+</script>
 
 <!-- 100% 배경이미지 때문에 사용 -->
 </div>
