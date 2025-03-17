@@ -315,13 +315,13 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                 <div id="sh_aside_wrapper">
 <ul id="sh_snb">
         <li class='snb_on' >
-        <a><span onclick="scrollToAnchor('#obtain')">공공기관 자재 조달</span></a>
+        <a href="#obtain">공공기관 자재 조달</a>
     </li>
         <li >
-        <a><span onclick="scrollToAnchor('#manufacture')">화력 발전소 발전기자재 제조</span></a>
+        <a href="#manufacture">화력 발전소 발전기자재 제조</a>
     </li>
     <li >
-        <a><span onclick="scrollToAnchor('#ai')">AI 솔루션(MRO & SRM)개발 및 공급</span></a>
+        <a href="#ai">AI 솔루션(MRO & SRM)개발 및 공급</a>
     </li>
     </ul>
 <!-- 소분류 끝 --></div>
@@ -476,17 +476,6 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
     </div>	
 </div>
 
-<script>
-    function scrollToAnchor(anchor) {
-        let anchor = document.querySelector(anchorI);
-        if(anchor) {
-            anchor.scrollIntoView({
-                behavior: 'smooth',
-                block: 'ceenter'
-            });
-        }
-    }
-</script>
 
 <!-- 100% 배경이미지 때문에 사용 -->
 </div>
