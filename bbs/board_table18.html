@@ -166,7 +166,7 @@ var g5_bbs_url   = "https://hyunhlee.github.io/bbs";
 var g5_is_member = "";
 var g5_is_admin  = "";
 var g5_is_mobile = "";
-var g5_bo_table  = "table19";
+var g5_bo_table  = "table18";
 var g5_sca       = "";
 var g5_editor    = "smarteditor2";
 var g5_cookie_domain = "";
@@ -190,7 +190,7 @@ var g5_cookie_domain = "";
 <!-- 상단 시작 { -->
     <div id="sh_hd">	
         <div class="top_nav_bg"></div>
-        <h1 id="hd_h1">뉴스 1 페이지</h1>
+        <h1 id="hd_h1">공지사항 1 페이지</h1>
         <div id="skip_to_container"><a href="#sh_container">본문 바로가기</a></div>
                 <div id="sh_hd_wrapper">
             
@@ -304,7 +304,7 @@ var g5_cookie_domain = "";
 <div id="subBnr">
 	<div class="txt_area">
     	<p>Eco-friendly Innovation</p>
-        <span>뉴스</span>
+        <span>공지사항</span>
     </div>
 </div>    
 
@@ -316,10 +316,10 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
             <div id="sh_aside">
                 <div id="sh_aside_wrapper">
 <ul id="sh_snb">
-        <li >
+        <li class='snb_on'>
         <a href="/bbs/board_table18.html">공지사항</a>
     </li>
-        <li class='snb_on' >
+        <li>
         <a href="/bbs/board_table19.html">뉴스</a>
     </li>
         <!--<li >
@@ -339,7 +339,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
 		        <fieldset id="sh_bo_sch">
             <legend>게시물 검색</legend>
             <form name="fsearch" method="get">
-            <input type="hidden" name="bo_table" value="table19">
+            <input type="hidden" name="bo_table" value="table18">
             <input type="hidden" name="sca" value="">
             <input type="hidden" name="sop" value="and">
             <label for="sfl" class="sound_only">검색대상</label>
@@ -358,7 +358,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
     </div>
         
     <form name="fboardlist" id="fboardlist" action="./board_list_update.html" onsubmit="return fboardlist_submit(this);" method="post">
-        <input type="hidden" name="bo_table" value="table19">
+        <input type="hidden" name="bo_table" value="table18">
         <input type="hidden" name="sfl" value="">
         <input type="hidden" name="stx" value="">
         <input type="hidden" name="spt" value="">
