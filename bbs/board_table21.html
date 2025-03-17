@@ -336,59 +336,57 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
             
 <div id="sh_map_v">
 
-    <div class="tit_area">
-        <span>ADDRESS</span>
-        <p>본사 : 경기 김포시 고촌읍 전호로 32(전호리) 1동,2동</p>
+    <div class="map_div">
+        <div class="tit_area">
+            <span>ADDRESS</span>
+            <p>본사 : 경기 김포시 고촌읍 전호로 32(전호리) 1동,2동</p>
+        </div>
+
+        <div id="sh_iframe_wrap">
+            <!--<iframe id="sh_iframe" frameborder='0' border='0' marginwidth='0' marginheight='0' scrolling='no' title="Shining 오시는길"></iframe>-->
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div id="daumRoughmapContainer1742170136603" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+            <!--
+                2. 설치 스크립트
+                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+            -->
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1742170136603",
+                    "key" : "2nchp",
+                    "mapWidth" : "640",
+                    "mapHeight" : "360"
+                }).render();
+            </script>
+        </div>
     </div>
 
-    <div id="sh_iframe_wrap">
-        <!--<iframe id="sh_iframe" frameborder='0' border='0' marginwidth='0' marginheight='0' scrolling='no' title="Shining 오시는길"></iframe>-->
-        <!-- * 카카오맵 - 지도퍼가기 -->
-        <!-- 1. 지도 노드 -->
-        <div id="daumRoughmapContainer1742170136603" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    <div class="map_div">
+        <div class="tit_area">
+            <span>ADDRESS</span>
+            <p>AI 연구동 : 서울특별시 강남구 언주로87길6 702호</p>
+        </div>
 
-        <!--
-            2. 설치 스크립트
-            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-        -->
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+        <div id="sh_iframe_wrap">
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div id="daumRoughmapContainer1742170220915" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-        <!-- 3. 실행 스크립트 -->
-        <script charset="UTF-8">
-            new daum.roughmap.Lander({
-                "timestamp" : "1742170136603",
-                "key" : "2nchp",
-                "mapWidth" : "640",
-                "mapHeight" : "360"
-            }).render();
-        </script>
-    </div>
-
-    <div class="tit_area">
-        <span>ADDRESS</span>
-        <p>AI 연구동 : 서울특별시 강남구 언주로87길6 702호</p>
-    </div>
-
-    <div id="sh_iframe_wrap">
-        <!-- * 카카오맵 - 지도퍼가기 -->
-        <!-- 1. 지도 노드 -->
-        <div id="daumRoughmapContainer1742170220915" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-        <!--
-            2. 설치 스크립트
-            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-        -->
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-        <!-- 3. 실행 스크립트 -->
-        <script charset="UTF-8">
-            new daum.roughmap.Lander({
-                "timestamp" : "1742170220915",
-                "key" : "2nchq",
-                "mapWidth" : "640",
-                "mapHeight" : "360"
-            }).render();
-        </script>
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1742170220915",
+                    "key" : "2nchq",
+                    "mapWidth" : "640",
+                    "mapHeight" : "360"
+                }).render();
+            </script>
+        </div>
     </div>
 
     
