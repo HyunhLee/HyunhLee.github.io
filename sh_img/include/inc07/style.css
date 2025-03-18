@@ -12,10 +12,10 @@
 #atc07 .gall_area .incrute-wrapper{display: flex;}
 #atc07 .gall_area ul li{overflow:hidden;width:610px;background:center no-repeat;background-size:cover}
 #atc07 .gall_area ul .img_area{overflow:hidden;width:410px;height:360px}
-#atc07 .gall_area ul .img_area img{transition:all .8s var(--ani);width:100%}
+#atc07 .gall_area ul .img_area img{transition:all .8s var(--ani);width:100%;height: 277px;}
 #atc07 .gall_area ul li a:hover .img_area img{transform:scale(1.15)}
-#atc07 .gall_area ul li .txt{padding:30px;background-color: var(--primary);}
+#atc07 .gall_area ul li .txt{padding:25px;background-color: #589fcd;}
 #atc07 .gall_area ul li h2{color:#fff}
 #atc07 .gall_area ul li .txt em{font-size:15px;font-weight:700;font-style:normal;color:var(--primary);letter-spacing:0;font-family:'Poppins'}
-#atc07 .gall_area ul li .txt p{padding:25px 0 15px;font-size:17px;color:#fff;font-family:'notokr-medium'}
+#atc07 .gall_area ul li .txt p{padding:15px 0 0;font-size:15px;height:200px;color:#fff;font-family:'notokr-medium'}
 #atc07 .gall_area ul li .txt span{font-size:14px;font-weight:600;color:#aaa;letter-spacing:0;font-family:'Poppins'}
