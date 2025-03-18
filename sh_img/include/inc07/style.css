@@ -21,11 +21,11 @@
 #atc07 .gall_area ul li .txt span{font-size:14px;font-weight:600;color:#aaa;letter-spacing:0;font-family:'Poppins'}
 
 #atc07 .cont_box{position:relative;float:right;width:900px;margin-top:-300px;}
-#atc07 .cont_box .box{overflow:hidden;display:inline-block;margin-top:-150px}
-#atc07 .cont_box .energy2{float:right;margin-top:80px}
+#atc07 .cont_box .box{overflow:hidden;display:inline-block;margin-top:-50px}
+#atc07 .cont_box .energy2{float:right;margin-top:100px}
 #atc07 .cont_box .box a{color:#fff}
 #atc07 .cont_box .box a .img_area{overflow:hidden;width:390px;height:500px}
-#atc07 .cont_box .box a img{filter:grayscale(1);transition:all .5s var(--ani)}
+#atc07 .cont_box .box a img{filter:grayscale(1);transition:all .5s var(--ani);width: 100%;}
 #atc07 .cont_box .box a:hover img{transform:scale(1.15)}
 #atc07 .cont_box .box a:hover img{filter:none}
 #atc07 .cont_box .box a svg{position:absolute;bottom:0;left:30px;transition:all .3s var(--ani)}
