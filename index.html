@@ -617,39 +617,6 @@ gsap.to("#atc02", {
         
     </div>
 </article>
-
-<script>
-    $(function(){
-        var atc07T = $("#atc07").offset().top; 
-        hdH = $("#topNavWrap").height();
-        contT = $("#atc07 .cont_box").offset().top;
-        contH = $("#atc07 .cont_box").offset().top + $("#atc07 .cont_box").innerHeight() - window.innerHeight/2;
-        $(window).on("scroll",function(){
-            var scrt = $(window).scrollTop();
-            if(scrt > contT - hdH - 100) {
-                $('#atc07 .tit').addClass("fix");
-            } else if(scrt < contT) {
-                $('#atc07 .tit').removeClass("fix");
-            } 
-            if (scrt > contH) {			
-                $('#atc07 .tit').addClass("off");		
-            } else{
-                $('#atc07 .tit').removeClass("off");			
-            }
-        });	 
-    });
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#atc07", {
-        scrollTrigger: {
-            //markers: true,
-            trigger: "#atc07",
-            start: "-50%",
-            end: "center",
-            scrub: 0.1,
-        },
-        width:"100%",
-    });
-    </script>    
   
 <script>
 var swiper = new Swiper('.swiper-container', {
