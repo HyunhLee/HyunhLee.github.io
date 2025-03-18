@@ -551,7 +551,35 @@ gsap.to("#atc02", {
     <div class="cont_area">
     	<div class="tit"> <p>채용</p> <span>발해와 함께할 분들을 기다립니다.</span></div> 
         
-        <div class="gall_area">
+        <div class="cont_box">
+            <div class="box energy1" data-sb="fadeInUp">
+                <a href="">
+                    <div class="img_area"><img src="/sh_img/include/inc02/img/box_img01.jpg" alt="Wind Energy" /></div>
+                    <div class="txt">
+                        <p>인재상</p>
+                        <div>- 공동의 목표 달성을 위해 소통과 협업에 적극적인 인재 <br />
+                            - 맡은바 업무를 끝까지 완수하는 책임의식을 가진 인재 <br />
+                            - 실패를 두려워하지 않는 용기와 도전정신을 가진 인재</div>
+                        <div class="arrow"><i class="off" data-feather="arrow-up-right"></i><i class="on" data-feather="arrow-up-right"></i></div>
+                    </div>
+                </a>
+             </div>
+             <div class="box energy2" data-sb="fadeInUp">
+                <a href="">
+                    <div class="img_area"><img src="/sh_img/include/inc02/img/box_img02.jpg" alt="Solar Energy" /></div>
+                    <div class="txt">
+                        <p>채용절차</p>
+                        <div>01. 서류전형 <br />
+                            02. 1차 면접(개발자의 경우 코딩테스트 후 진행) <br />
+                            03. 2차(임원) 면접 <br />
+                            04. 처우협의 <br />
+                            05. 최종합격</div>
+                        <div class="arrow"><i class="off" data-feather="arrow-up-right"></i><i class="on" data-feather="arrow-up-right"></i></div>
+                    </div>
+                </a>
+            </div>    
+        </div>
+        <!--<div class="gall_area">
             <div class="incrute-container">
                 <ul class="incrute-wrapper">
                     <div class="img_area"><img src="/data/editor/2112/CK_tica114m19040522.jpg" alt="인재상"/></div>
@@ -585,10 +613,43 @@ gsap.to("#atc02", {
                     </li>			
                 </ul>
             </div> 
-        </div>
+        </div>-->
         
     </div>
 </article>
+
+<script>
+    $(function(){
+        var atc07T = $("#atc07").offset().top; 
+        hdH = $("#topNavWrap").height();
+        contT = $("#atc07 .cont_box").offset().top;
+        contH = $("#atc07 .cont_box").offset().top + $("#atc07 .cont_box").innerHeight() - window.innerHeight/2;
+        $(window).on("scroll",function(){
+            var scrt = $(window).scrollTop();
+            if(scrt > contT - hdH - 100) {
+                $('#atc07 .tit').addClass("fix");
+            } else if(scrt < contT) {
+                $('#atc07 .tit').removeClass("fix");
+            } 
+            if (scrt > contH) {			
+                $('#atc07 .tit').addClass("off");		
+            } else{
+                $('#atc07 .tit').removeClass("off");			
+            }
+        });	 
+    });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#atc07", {
+        scrollTrigger: {
+            //markers: true,
+            trigger: "#atc07",
+            start: "-50%",
+            end: "center",
+            scrub: 0.1,
+        },
+        width:"100%",
+    });
+    </script>    
   
 <script>
 var swiper = new Swiper('.swiper-container', {

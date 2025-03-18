@@ -19,3 +19,21 @@
 #atc07 .gall_area ul li .txt em{font-size:15px;font-weight:700;font-style:normal;color:var(--primary);letter-spacing:0;font-family:'Poppins'}
 #atc07 .gall_area ul li .txt p{padding:15px 0 0;font-size:15px;height:200px;color:#fff;font-family:'notokr-medium'}
 #atc07 .gall_area ul li .txt span{font-size:14px;font-weight:600;color:#aaa;letter-spacing:0;font-family:'Poppins'}
+
+#atc07 .cont_box{position:relative;float:right;width:900px}
+#atc07 .cont_box .box{overflow:hidden;display:inline-block;margin-top:-150px}
+#atc07 .cont_box .energy2{float:right;margin-top:410px}
+#atc07 .cont_box .energy3{margin-top:200px}
+#atc07 .cont_box .energy4{float:right;margin-top:-250px}
+#atc07 .cont_box .box a{color:#fff}
+#atc07 .cont_box .box a .img_area{overflow:hidden;width:390px;height:500px}
+#atc07 .cont_box .box a img{filter:grayscale(1);transition:all .5s var(--ani)}
+#atc07 .cont_box .box a:hover img{transform:scale(1.15)}
+#atc07 .cont_box .box a:hover img{filter:none}
+#atc07 .cont_box .box a svg{position:absolute;bottom:0;left:30px;transition:all .3s var(--ani)}
+#atc07 .cont_box .box a svg.on{opacity:0;bottom:10px;left:40px;color:#fff}
+#atc07 .cont_box .box a:hover svg.on{opacity:1;bottom:0;left:30px}
+#atc07 .cont_box .box a:hover svg.off{opacity:0;bottom:-10px;left:20px}
+#atc07 .cont_box .box p{font-size:27px;font-weight:600;letter-spacing:0;font-family:'Poppins'}
+#atc07 .cont_box .box .txt{position:relative;z-index:10;margin-top:-25px;padding:0 30px 30px}
+#atc07 .cont_box .box .txt div{margin:15px 0 25px;color:rgba(255,255,255,.7)}
