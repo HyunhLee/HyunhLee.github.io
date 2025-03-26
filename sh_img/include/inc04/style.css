@@ -4,7 +4,7 @@
 #atc04 .bg_area:after{position:absolute;content:'';top:0;right:0;width:calc((100% - 1495px) / 2);height:665px;background:#fff}
 #atc04 .cont_area{position:relative;width:1495px;margin:0 auto;padding:270px 0 0}
 #atc04 .cont_area .tit{margin-bottom:70px;color:rgba(255,255,255,.5)}
-#atc04 .cont_area .tit p{display:inline-block;font-size:45px;color:#fff;font-family:'notokr-bold'}
+#atc04 .cont_area .tit p{display:inline-block;font-size:45px;color:#111;font-family:'notokr-bold'}
 #atc04 .cont_area .tit span{margin-left:20px;vertical-align:11px}
 #atc04 .gall_area{position:relative}
 #atc04 .gall_area:after{position:absolute;content:'';z-index:-1;bottom:0;right:0;width:1px;height:100%;background:#e1e1e1}

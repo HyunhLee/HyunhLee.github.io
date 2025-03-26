@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #atc02{width:80%;height:2790px;margin:0 auto;background:url(/sh_img/include/inc02/img/CK_cm26006298.jpg) no-repeat fixed; background-size:cover;transition:all .3s var(--ani)}
-#atc02 .cont_area{overflow:hidden;position:relative;width:1495px;margin:0 auto;padding-top:1000px}
+#atc02 .cont_area{overflow:hidden;position:relative;width:1495px;margin:0 204.5px;padding-top:1000px}
 #atc02 .tit{float:left;margin-top:100px;padding-left:95px;font-size:45px;font-weight:600;line-height:1.3;color:#fff;letter-spacing:0;font-family:'Poppins'}
 #atc02 .tit.fix{position:fixed;top:190px}
 #atc02 .tit.off{position:absolute;top:auto;bottom:85px}
