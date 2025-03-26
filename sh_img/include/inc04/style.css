@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#atc04 .bg_area{position:absolute;width:100%;height:665px;background:url(/sh_img/include/inc04/img/v2\ \(2\).jpeg) fixed; background-size: 1900px 965px;}
+#atc04 .bg_area{position:absolute;width:100%;height:665px;background:url(/sh_img/include/inc04/img/v2.jpeg) fixed; background-size: 1900px 965px;}
 #atc04 .bg_area:after{position:absolute;content:'';top:0;right:0;width:calc((100% - 1495px) / 2);height:665px;background:#fff}
 #atc04 .cont_area{position:relative;width:1495px;margin:0 auto;padding:270px 0 0}
 #atc04 .cont_area .tit{margin-bottom:70px;color:rgba(255,255,255,.5)}
@@ -11,7 +11,7 @@
 #atc04 .gall_area .swiper-container{width:90%;margin:0}
 #atc04 .gall_area ul li{overflow:hidden;width:410px;background:center no-repeat;background-size:cover}
 #atc04 .gall_area ul li .img_area{overflow:hidden;width:410px;height:360px}
-#atc04 .gall_area ul li a .img_area img{transition:all .8s var(--ani)}
+#atc04 .gall_area ul li a .img_area img{transition:all .8s var(--ani);width: 100%;height: 100%;}
 #atc04 .gall_area ul li a:hover .img_area img{transform:scale(1.15)}
 #atc04 .gall_area ul li .txt{padding:30px}
 #atc04 .gall_area ul li .txt em{font-size:15px;font-weight:700;font-style:normal;color:var(--primary);letter-spacing:0;font-family:'Poppins'}
