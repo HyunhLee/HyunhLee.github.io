@@ -38,7 +38,7 @@
 .p7 .history dl dd span{float:left;padding-right:20px;color:#333;font-family:'notokr-medium'}
 
 /* 조직도 */
-.p8{position:relative;width:80%;min-height:450px;margin:0 auto;background:url(/sh_page/img/ceo.png) 30px 43px no-repeat;font-family:'notokr-medium'}
+.p8{position:relative;width:100%;min-height:600px;margin:0 auto;background:url(/sh_page/img/ceo.png) no-repeat;font-family:'notokr-medium';background-size: contain;}
 .p8 ul{display: none;}
 .p8 li{position:absolute;padding:10px 0;width:123px;height:20px;line-height:20px;color:#222;text-align:center;background-color:#f2f2f2;box-sizing:content-box!important}
 .p8 .ceo{top:20px;left:338px;width:144px ;height:30px;background-color:#7e5f4b;font-size:17px;line-height:30px;color:#fff}
