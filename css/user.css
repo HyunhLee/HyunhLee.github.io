@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https:https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* 컬러 변수 셋팅 */
 :root{--primary:#0f5fb9;--ani:cubic-bezier(0.25, 0.46, 0.45, 0.94)}
