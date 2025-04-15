@@ -72,18 +72,6 @@
 
 }
 @font-face {
-    font-family: 'notokr-demilight';
-    src: url(https://happist.com/Font/notokr-demilight.eot);
-    src: url(https://happist.com/Font/notokr-demilight.eot?#iefix) format('embedded-opentype'),
-         url(https://happist.com/Font/notokr-demilight.woff2) format('woff2'),
-         url(https://happist.com/Font/notokr-demilight.woff) format('woff'),
-         url(https://happist.com/Font/notokr-demilight.ttf) format('truetype'),
-         url(https://happist.com/Font/notokr-demilight.svg#notokr-demilight) format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
     font-family: 'notokr-bold';
     src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.eot);
     src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
