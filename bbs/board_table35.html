@@ -168,6 +168,8 @@ var g5_cookie_domain = "";
 <link rel="stylesheet" href="/js/font-awesome/css/font-awesome.min.css">
 <script src="/sh_img/js/feather.min.js"></script>
 <script src="/sh_img/hd/top_menu/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -368,7 +370,31 @@ var g5_cookie_domain = "";
                                 <th scope="col">등록일</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="test_list">
+                            <script>
+                                const test = [
+                                    { id: 0, thumb: "zombie1.jpg", title: "좀비 1화", time: 48 },
+                                    { id: 1, thumb: "zombie2.jpg", title: "좀비 2화", time: 59 },
+                                    { id: 2, thumb: "zombie3.jpg", title: "좀비 3화", time: 55 }
+                                ];
+                                test.forEach((data) => {
+                                    const template = `
+                                        <tr class="">
+                                            <td class="num">9</td>
+                                            <td class="subject" style="padding-left:0px">
+                                                <div> 
+                                                    <a href="/bbs/board_table35_detail.html?param1=value1&param2=value2">
+                                                        ${data.title}
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td class="name sv_use"><span class="sv_member">${data.id}</span></td>
+                                            <td class="datetime">2021-12-14</td>
+                                        </tr>
+                                    `;
+                                    $(".test_list").append(template);
+                                })
+                            </script>
                                                 <tr class="">
                                                         <td class="num">
                                 9                        </td>
