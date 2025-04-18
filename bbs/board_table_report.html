@@ -25,8 +25,8 @@
         .apply-form {
           background: white;
           padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 0 15px rgba(0,0,0,0.1);
+          /* border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0,0,0,0.1); */
           /* width: 420px; */
         }
     
@@ -241,10 +241,7 @@
         // 페이지 로드 시 파라미터를 읽고 표시
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
-            document.getElementById('title').textContent = `${params.param1}`;
-            document.getElementById('month').textContent = `${params.param2}`;
-            console.log(params.param1)
-            console.log(params.param2)
+            document.getElementById('title').textContent = `${params.param1}, ${params.param2}`;
         });
     </script>
 
@@ -401,7 +398,6 @@
                                 <h2>입사지원서</h2>
                                 <div class="error" id="errorMsg"></div>
                                 <p id="title"></p>
-                                <p id="month"></p>
                                 <input type="text" id="name" placeholder="이름" required />
                                 <input type="email" id="email" placeholder="이메일" required />
                                 <input type="tel" id="phone" placeholder="전화번호 (예: 010-1234-5678)" required />
