@@ -392,6 +392,7 @@
                                 <input type="text" id="name" placeholder="이름" required />
                                 <input type="email" id="email" placeholder="이메일" required />
                                 <input type="tel" id="phone" placeholder="전화번호 (예: 010-1234-5678)" required />
+                                <input type="text" id="address" placeholder="주소" required />
                                 <textarea id="intro" placeholder="자기소개" required></textarea>
                             
                                 <label>이력서 (PDF)</label>
@@ -425,6 +426,7 @@
                                     const phone = $('#phone').val().trim();
                                     const intro = $('#intro').val().trim();
                                     const port = $('#port').val().trim();
+                                    const address = $('#address').val().trim();
                             
                                     const resumeFile = $('#resume')[0].files[0];
                                     const coverLetterFile = $('#coverLetter')[0].files[0];
@@ -441,6 +443,7 @@
                                     formData.append('phone', phone);
                                     formData.append('introduction', intro);
                                     formData.append('port', port);
+                                    formData.append('address', address);
                                     formData.append('resume', resumeFile);
                                     formData.append('coverLetter', coverLetterFile);
                                     if (portfolioFile) {
