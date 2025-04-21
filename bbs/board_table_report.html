@@ -402,6 +402,9 @@
                             
                                 <label>포트폴리오 (선택)</label>
                                 <input type="file" id="portfolio" accept=".pdf,.zip,.ppt,.pptx,.docx,.jpg,.png" />
+
+                                <label>포트폴리오 URL (선택)</label>
+                                <input type="text" id="port" placeholder="포트폴리오 URL" required />
                             
                                 <button type="submit">지원하기</button>
                               </form>
@@ -421,12 +424,13 @@
                                     const email = $('#email').val().trim();
                                     const phone = $('#phone').val().trim();
                                     const intro = $('#intro').val().trim();
+                                    const port = $('#port').val().trim();
                             
                                     const resumeFile = $('#resume')[0].files[0];
                                     const coverLetterFile = $('#coverLetter')[0].files[0];
                                     const portfolioFile = $('#portfolio')[0].files[0]; // optional
                             
-                                    if (!name || !email || !phone || !intro || !resumeFile || !coverLetterFile) {
+                                    if (!name || !email || !phone || !intro || !port || !resumeFile || !coverLetterFile) {
                                       errorMsg.text('모든 필수 항목을 입력하고 파일을 첨부해주세요.');
                                       return;
                                     }
@@ -436,6 +440,7 @@
                                     formData.append('email', email);
                                     formData.append('phone', phone);
                                     formData.append('introduction', intro);
+                                    formData.append('port', port);
                                     formData.append('resume', resumeFile);
                                     formData.append('coverLetter', coverLetterFile);
                                     if (portfolioFile) {
