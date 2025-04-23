@@ -373,17 +373,17 @@ var g5_cookie_domain = "";
                         <tbody class="test_list">
                             <script>
                                 const test = [
-                                    { id: 0, thumb: "zombie1.jpg", title: "좀비 1화", time: 48 },
-                                    { id: 1, thumb: "zombie2.jpg", title: "좀비 2화", time: 59 },
-                                    { id: 2, thumb: "zombie3.jpg", title: "좀비 3화", time: 55 }
+                                    { id: "관리자", title: "AI 기반 시스템 개발 데이터엔지니어 채용", no: 3 },
+                                    { id: "관리자", title: "AI 기반 시스템 개발 백엔드 채용", no: 2 },
+                                    { id: "관리자", title: "AI 기반 시스템 개발 프론트엔드 채용", no: 1 }
                                 ];
                                 test.forEach((data) => {
                                     const template = `
                                         <tr class="">
-                                            <td class="num">${data.time}</td>
+                                            <td class="num">${data.no}</td>
                                             <td class="subject" style="padding-left:0px">
                                                 <div> 
-                                                    <a href="/bbs/board_table35_detail.html?param1=value1&param2=value2">
+                                                    <a href="/bbs/board_table35_detail.html?param1=${data.no}&param2=value2">
                                                         ${data.title}
                                                     </a>
                                                 </div>
