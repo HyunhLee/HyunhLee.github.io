@@ -190,6 +190,7 @@ var g5_cookie_domain = "";
         // 페이지 로드 시 파라미터를 읽고 표시
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
+            console.log(JSON.stringify(params.param3).length);
             document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
             document.getElementById('body1').innerHTML = `${params.body1}`;
             document.getElementById('body2').innerHTML = `${params.body2}`;
