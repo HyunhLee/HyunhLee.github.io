@@ -178,18 +178,29 @@ var g5_cookie_domain = "";
             const params = new URLSearchParams(window.location.search);
             const param1 = params.get('param1'); // param1 값을 가져옴
             const param2 = params.get('param2'); // param2 값을 가져옴
-            return { param1, param2 };
+            const param3 = params.get('param3'); // param1 값을 가져옴
+            const param4 = params.get('param4'); // param2 값을 가져옴
+            const body1 = params.get('body1'); // param1 값을 가져옴
+            const body2 = params.get('body2'); // param2 값을 가져옴
+            const body3 = params.get('body3'); // param1 값을 가져옴
+            const body4 = params.get('body4'); // param2 값을 가져옴
+            return { param1, param2, param3, param4, body1, body2, body3, body4  };
         }
 
         // 페이지 로드 시 파라미터를 읽고 표시
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
-            // document.getElementById('param1').textContent = `Param1: ${params.param1}`;
-            // document.getElementById('param2').textContent = `Param2: ${params.param2}`;
-            document.querySelector("#sh_bo_v .tit").textContent = `${params.param2}`;
-            console.log(`Param1: ${params.param1}`)
-            console.log(`Param2: ${params.param2}`)
+            document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
+            document.getElementById('body1').textContent = `${params.body1}`;
+            document.getElementById('body2').textContent = `${params.body2}`;
+            document.getElementById('body3').textContent = `${params.body3}`;
+            document.getElementById('body4').textContent = `${params.body4}`;
         });
+
+        function goToSaramin() {
+            const params = getQueryParams();
+            location.href = `${params.param3}`;
+        }
     </script>
     
 
@@ -349,8 +360,8 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
     <div class="info">
     	<p><b>작성자</b><span class="sv_member">관리자</span></p>
         <ul>
-            <li><b>등록일</b> 21-12-14</li>		
-            <li><b>조회</b>1,418회</li>
+            <li><b>등록일</b> 25-03-01</li>		
+            <li><b>조회</b>148회</li>
         </ul>
     </div>
     
@@ -363,14 +374,34 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
         
 		<div id="bo_v_img">
 </div>
-		<p><img src="/data/editor/2112/999c50136da61fb88b520db5229d208d_1639461679_3506.jpg" title="999c50136da61fb88b520db5229d208d_1639461679_3506.jpg" alt="999c50136da61fb88b520db5229d208d_1639461679_3506.jpg" /></p><p>플라즈마 기술활용 청정에너지화 사업은 플라즈마 가스화 기술을 활용, 코로나19 팬데믹에 따라 사용량이 급증한 1회용품의 비닐·플라스틱을 원료로 친환경 수소를 생산하고, 이를 16MW급 연료전지 발전에 사용해 깨끗한 전기를 생산하는 것을 골자로 한다. 이를 통해 약 1400개의 직·간접 일자리 창출과 약 3400억원의 생산 유발 효과가 기대된다.<br style="clear:both;" /> </p>    </div>
-        <button onclick="location.href = '/bbs/board_table_report.html?param1=자재구매팀&param2=5월공고'">버튼!</button>
-        
-            
+		<p>
+            "우리는 물류 유통 업계에서 쌓아온 경험을 바탕으로, 소프트웨어 개발을 하려고 합니다. 고객의 비즈니스 요구를 충족시키기 위해 AI 솔루션을 개발하여
+            물류와 유통의 효율성을 높이고자 합니다."
+            <br />
+            <br />
+            [주요업무]
+            <br />
+            <p id="body1"></p>
+            <br />
+            [자격요건]
+            <br />
+            <p id="body2"></p>
+            <br />
+            [우대사항]
+            <br />
+            <p id="body3"></p>
+            <br />
+            [개발환경]
+            <br />
+            <p id="body4"></p>
+
+        </p>    </div>
+        <!-- <button onclick="location.href = '/bbs/board_table_report.html?param1=자재구매팀&param2=5월공고'">버튼!</button> -->
+        <button onclick="goToSaramin()">사람인 공고 바로가기</button>
     
-	    <ul class="v_page">
+	    <!-- <ul class="v_page">
                 <li><span><i class="fa fa-angle-down"></i></span><a href="./board_table18&wr_id=46.html">한국지배구조원 ESG 평가서 'A' 등급</a></li>    </ul>
-    
+     -->
     <div class="btn_area">
                 <ul class="left">
                                 </ul>
