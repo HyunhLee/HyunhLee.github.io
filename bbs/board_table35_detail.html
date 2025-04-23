@@ -186,8 +186,7 @@ var g5_cookie_domain = "";
             const params = getQueryParams();
             // document.getElementById('param1').textContent = `Param1: ${params.param1}`;
             // document.getElementById('param2').textContent = `Param2: ${params.param2}`;
-            g5_sca = params.param1;
-            console.log(`g5_sca: ${g5_sca}`)
+            document.querySelector("#sh_bo_v .tit").textContent = `${params.param2}`;
             console.log(`Param1: ${params.param1}`)
             console.log(`Param2: ${params.param2}`)
         });
@@ -345,11 +344,10 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
             <div id="sh_content">
             
 <section id="sh_bo_v">
-	<p class="tit">
-		        플라즈마 기술 활용 청정에너지 사업 참여	</p>
+	<p class="tit"></p>
     
     <div class="info">
-    	<p><b>작성자</b><span class="sv_member">최고관리자</span></p>
+    	<p><b>작성자</b><span class="sv_member">관리자</span></p>
         <ul>
             <li><b>등록일</b> 21-12-14</li>		
             <li><b>조회</b>1,418회</li>
