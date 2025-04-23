@@ -178,13 +178,14 @@ var g5_cookie_domain = "";
             const params = new URLSearchParams(window.location.search);
             const param1 = params.get('param1'); // param1 값을 가져옴
             const param2 = params.get('param2'); // param2 값을 가져옴
-            const param3 = params.get('param3'); // param1 값을 가져옴
-            const param4 = params.get('param4'); // param2 값을 가져옴
-            const body1 = params.get('body1'); // param1 값을 가져옴
-            const body2 = params.get('body2'); // param2 값을 가져옴
-            const body3 = params.get('body3'); // param1 값을 가져옴
-            const body4 = params.get('body4'); // param2 값을 가져옴
-            return { param1, param2, param3, param4, body1, body2, body3, body4  };
+            const param3 = params.get('param3'); // param3 값을 가져옴
+            const param4 = params.get('param4'); // param4 값을 가져옴
+            const param5 = params.get('param5'); // param5 값을 가져옴
+            const body1 = params.get('body1'); // body1 값을 가져옴
+            const body2 = params.get('body2'); // body2 값을 가져옴
+            const body3 = params.get('body3'); // body3 값을 가져옴
+            const body4 = params.get('body4'); // body4 값을 가져옴
+            return { param1, param2, param3, param4, param5, body1, body2, body3, body4  };
         }
 
         // 페이지 로드 시 파라미터를 읽고 표시
@@ -192,6 +193,7 @@ var g5_cookie_domain = "";
             const params = getQueryParams();
             console.log(JSON.stringify(params.param3).length);
             document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
+            document.getElementById('date').insertAdjacentHTML('afterend', `${params.param5}`);
             document.getElementById('body1').innerHTML = `${params.body1}`;
             document.getElementById('body2').innerHTML = `${params.body2}`;
             document.getElementById('body3').innerHTML = `${params.body3}`;
@@ -361,7 +363,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
     <div class="info">
     	<p><b>작성자</b><span class="sv_member">관리자</span></p>
         <ul>
-            <li><b>등록일</b> 25-03-01</li>		
+            <li><b id="date">등록일</b></li>		
             <li><b>조회</b>148회</li>
         </ul>
     </div>
