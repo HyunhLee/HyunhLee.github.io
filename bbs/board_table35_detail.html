@@ -191,10 +191,10 @@ var g5_cookie_domain = "";
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
             document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
-            document.getElementById('body1').textContent = `${params.body1}`;
-            document.getElementById('body2').textContent = `${params.body2}`;
-            document.getElementById('body3').textContent = `${params.body3}`;
-            document.getElementById('body4').textContent = `${params.body4}`;
+            document.getElementById('body1').innerHTML = `${params.body1}`;
+            document.getElementById('body2').innerHTML = `${params.body2}`;
+            document.getElementById('body3').innerHTML = `${params.body3}`;
+            document.getElementById('body4').innerHTML = `${params.body4}`;
         });
 
         function goToSaramin() {
