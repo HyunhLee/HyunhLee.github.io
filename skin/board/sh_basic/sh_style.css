@@ -30,7 +30,7 @@ a.sh_adm_btn{display:block;text-align:center}
 a.cancel_btn{display:inline-block;vertical-align:top;width:75px;height:55px;border:none;border-radius:2px;font-size:15px;text-align:center;color:#fff;line-height:55px;background-color:#bbb;font-family:'notokr-medium'}
 a.btn_normal{display:inline-block;vertical-align:top;width:75px;height:55px;border:none;border-radius:2px;font-size:15px;text-align:center;color:#fff;line-height:55px;background-color:#bbb;font-family:'notokr-medium'}
 a.btn_line{display:inline-block;vertical-align:top;width:75px;height:55px;border:none;border-radius:2px;border:1px solid #d1d1d1;font-size:15px;text-align:center;color:#777;line-height:53px;font-family:'notokr-medium'}
-button.btn_line{display:inline-block;vertical-align:top;height:45px;border:none;border-radius:2px;border:1px solid #d1d1d1;font-size:15px;text-align:center;color:#777;line-height:45px;font-family:'notokr-medium';padding:'0 10px'}
+button.btn_line{display:inline-block;vertical-align:top;height:45px;border:none;border-radius:2px;border:1px solid #d1d1d1;font-size:15px;text-align:center;color:#777;line-height:45px;font-family:'notokr-medium';padding:0 10px}
 
 /* 페이지 */
 .pg_wrap{margin:40px 0 0;text-align:center;font-family:'notokr-regular'}
