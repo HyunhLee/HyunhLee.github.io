@@ -1,46 +1,70 @@
-function renderList(page) {
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const paginatedItems = test.slice(start, end);
+// pagination.js
+export function initPagination({
+    data = [],
+    containerSelector = '.test_list',
+    paginationSelector = '.pagination',
+    itemsPerPage = 5,
+    renderItem = () => '',
+  }) {
+    let currentPage = 1;
+    const totalPages = Math.ceil(data.length / itemsPerPage);
   
-    const $list = $(".test_list");
-    $list.empty();
-  
-    paginatedItems.forEach(data => {
-      const template = `
-        <tr>
-          <td class="num">${data.no}</td>
-          <td class="subject">
-            <div>
-              <a href="/bbs/board_table35_detail.html?param1=${data.no}&param2=${data.title}&param3=${data.url}&param4=${data.end}&param5=${data.date}&body1=${data.body1}&body2=${data.body2}&body3=${data.body3}&body4=${data.body4}">
-                ${data.title} (${data.end})
-              </a>
-            </div>
-          </td>
-          <td class="name sv_use"><span class="sv_member">${data.id}</span></td>
-          <td class="datetime">${data.date}</td>
-        </tr>
-      `;
-      $list.append(template);
-    });
-  }
-
-  function renderPagination() {
-    const $pagination = $(".pagination");
-    $pagination.empty();
-  
-    for (let i = 1; i <= totalPages; i++) {
-      const activeClass = (i === currentPage) ? 'active' : '';
-      $pagination.append(`
-        <li class="${activeClass}" style="display:inline-block; margin:0 5px; cursor:pointer;" data-page="${i}">
-          ${i}
-        </li>
-      `);
+    function renderList() {
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const items = data.slice(start, end);
+      const $container = document.querySelector(containerSelector);
+      $container.innerHTML = items.map(renderItem).join('');
     }
   
-    $(".pagination li").on("click", function () {
-      currentPage = parseInt($(this).data("page"));
-      renderList(currentPage);
-      renderPagination();
-    });
+    function renderPagination() {
+      const $pagination = document.querySelector(paginationSelector);
+      $pagination.innerHTML = '';
+  
+      // Prev button
+      const prev = document.createElement('li');
+      prev.innerHTML = '&laquo;';
+      prev.className = currentPage === 1 ? 'disabled' : '';
+      prev.style.cursor = 'pointer';
+      prev.onclick = () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderList();
+          renderPagination();
+        }
+      };
+      $pagination.appendChild(prev);
+  
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        const li = document.createElement('li');
+        li.textContent = i;
+        li.className = (i === currentPage) ? 'active' : '';
+        li.style.cursor = 'pointer';
+        li.onclick = () => {
+          currentPage = i;
+          renderList();
+          renderPagination();
+        };
+        $pagination.appendChild(li);
+      }
+  
+      // Next button
+      const next = document.createElement('li');
+      next.innerHTML = '&raquo;';
+      next.className = currentPage === totalPages ? 'disabled' : '';
+      next.style.cursor = 'pointer';
+      next.onclick = () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderList();
+          renderPagination();
+        }
+      };
+      $pagination.appendChild(next);
+    }
+  
+    renderList();
+    renderPagination();
   }
+  
