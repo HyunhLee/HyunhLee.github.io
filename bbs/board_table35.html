@@ -421,10 +421,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               itemsPerPage: 10,
                               renderItem: (data) => `
                                 <tr>
-                                  <td>${data.no}</td>
-                                  <td><a href="/bbs/board_table35_detail.html?param1=${data.no}">${data.title} (${data.end})</a></td>
-                                  <td>${data.id}</td>
-                                  <td>${data.date}</td>
+                                  <td text-align="center">${data.no}</td>
+                                  <td padding="10px 20px"><a href="/bbs/board_table35_detail.html?param1=${data.no}">${data.title} (${data.end})</a></td>
+                                  <td text-align="center">${data.id}</td>
+                                  <td text-align="center">${data.date}</td>
                                 </tr>
                               `
                             });
