@@ -180,6 +180,7 @@ var g5_cookie_domain = "";
 <script src="/js/jquery.menu.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/wrest.js"></script>
+<script src="/js/pagination.js"></script>
 <script src="/js/placeholders.min.js"></script>
 <link rel="stylesheet" href="/js/font-awesome/css/font-awesome.min.css">
 <script src="/sh_img/js/feather.min.js"></script>
@@ -192,6 +193,16 @@ var g5_cookie_domain = "";
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WPHDQ2D"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->    
+
+<!-- pagination -->
+<script>
+    const itemsPerPage = 3;
+    let currentPage = 1;
+    const totalPages = Math.ceil(test.length / itemsPerPage);
+
+    renderList(currentPage);
+    renderPagination();
+</script>
 
 <!-- 100% 배경이미지 때문에 사용 -->
 <div id="sh_wrapper">
@@ -436,6 +447,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div><!-- sh_container_wrapper --> 
         </div><!-- sh_container -->
         <!-- } 콘텐츠 끝 -->
+        <ul class="pagination"></ul>
 
 
 <!-- 하단 시작 { -->
