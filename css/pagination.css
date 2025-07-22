@@ -4,6 +4,8 @@
     gap: 8px;
     padding: 10px 0;
     justify-content: center;
+    height: 50px;
+    line-height: 15px;
 }
 .pagination li {
     padding: 5px 10px;
