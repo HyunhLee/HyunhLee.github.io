@@ -240,8 +240,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return bytes + ' B';
         }
 
-        // axios.get('/data/job_detail.json')
-        // .then(response => {
+        axios.get('http://10.52.40.30:8080/bidlist/ongoing')
+        .then(response => {
             // const { images, text, attachments } = response.data;
             const {images, text, attachments} = {
                 "images": [
@@ -287,10 +287,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }).join('');
             fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
             }
-        // })
-        // .catch(error => {
-        //     console.error('데이터 로드 실패:', error);
-        // });
+        })
+        .catch(error => {
+            console.error('데이터 로드 실패:', error);
+        });
     </script>
     
 
