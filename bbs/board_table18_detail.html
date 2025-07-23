@@ -241,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            axios.get('http://10.52.40.30:8080/bidlist/ongoing')
+            axios.get('https://api-tony-dev.balhea.kr/bidlist/ongoing')
             .then(response => {
                 // const { images, text, attachments } = response.data;
                 const {images, text, attachments} = {
