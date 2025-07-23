@@ -246,6 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         //         // const { images, text, attachments } = response.data;
             const params = getQueryParams();
             document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
+            document.getElementById('date').insertAdjacentHTML('afterend', `${params.param5}`);
                 const {images, text, attachments} = {
                     "images": [
                         "/upload/img1.jpg",
