@@ -244,6 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         //     axios.get('https://api-tony-dev.balhea.kr/bidlist/ongoing')
         //     .then(response => {
         //         // const { images, text, attachments } = response.data;
+            document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
                 const {images, text, attachments} = {
                     "images": [
                         "/upload/img1.jpg",
