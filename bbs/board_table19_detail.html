@@ -170,7 +170,7 @@ var g5_bbs_url   = "https://hyunhlee.github.io/bbs";
 var g5_is_member = "";
 var g5_is_admin  = "";
 var g5_is_mobile = "";
-var g5_bo_table  = "table18";
+var g5_bo_table  = "table19";
 var g5_sca       = "";
 var g5_editor    = "smarteditor2";
 var g5_cookie_domain = "";
@@ -225,68 +225,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             window.open("about:blank").location.href = `${params.param3}`;
         }
 
-        function escapeHTML(str) {
-            return str
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
+        // function escapeHTML(str) {
+        //     return str
+        //         .replace(/&/g, '&amp;')
+        //         .replace(/</g, '&lt;')
+        //         .replace(/>/g, '&gt;')
+        //         .replace(/"/g, '&quot;')
+        //         .replace(/'/g, '&#039;');
+        // }
 
-        function formatFileSize(bytes) {
-        if (bytes >= 1048576) return (bytes / 1048576).toFixed(1) + ' MB';
-        if (bytes >= 1024) return (bytes / 1024).toFixed(1) + ' KB';
-        return bytes + ' B';
-        }
+        // function formatFileSize(bytes) {
+        // if (bytes >= 1048576) return (bytes / 1048576).toFixed(1) + ' MB';
+        // if (bytes >= 1024) return (bytes / 1024).toFixed(1) + ' KB';
+        // return bytes + ' B';
+        // }
 
         // axios.get('/data/job_detail.json')
         // .then(response => {
-            // const { images, text, attachments } = response.data;
-            const {images, text, attachments} = {
-                "images": [
-                    "/upload/img1.jpg",
-                    "/upload/img2.png"
-                ],
-                "text": "AI 시스템 개발에 참여할 인재를 찾습니다.\n백엔드/프론트엔드 포지션을 채용 중입니다.",
-                "attachments": [
-                    {
-                    "name": "공고문.pdf",
-                    "url": "/files/공고문.pdf",
-                    "size": 1048576
-                    },
-                    {
-                    "name": "채용안내.docx",
-                    "url": "/files/채용안내.docx",
-                    "size": 26400
-                    }
-                ]
-            };
+        //     const { images, text, attachments } = response.data;
 
-            // 이미지 출력
-            const imgBox = document.getElementById('bo_v_img');
-            imgBox.innerHTML = images.map(src => `<img src="${src}" alt="" style="max-width:100%; margin-bottom:10px;" />`).join('');
+        //     // 이미지 출력
+        //     const imgBox = document.getElementById('bo_v_img');
+        //     imgBox.innerHTML = images.map(src => `<img src="${src}" alt="" style="max-width:100%; margin-bottom:10px;" />`).join('');
 
-            // 텍스트 출력 (XSS 방지 + 줄바꿈 처리)
-            const textBox = document.getElementById('bo_v_text');
-            const safeText = escapeHTML(text).replace(/\n/g, '<br />');
-            textBox.innerHTML = `<div>${safeText}</div>`;
+        //     // 텍스트 출력 (XSS 방지 + 줄바꿈 처리)
+        //     const textBox = document.getElementById('bo_v_text');
+        //     const safeText = escapeHTML(text).replace(/\n/g, '<br />');
+        //     textBox.innerHTML = `<div>${safeText}</div>`;
 
-            // 첨부파일 출력
-            const fileBox = document.getElementById('bo_v_file');
-            if (attachments && attachments.length > 0) {
-            const listItems = attachments.map(file => {
-                const size = formatFileSize(file.size || 0);
-                return `
-                <li>
-                    <a href="${file.url}" download="${file.name}">
-                    📎 ${file.name} <span style="color:gray; font-size: 0.9em;">(${size})</span>
-                    </a>
-                </li>
-                `;
-            }).join('');
-            fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
-            }
+        //     // 첨부파일 출력
+        //     const fileBox = document.getElementById('bo_v_file');
+        //     if (attachments && attachments.length > 0) {
+        //     const listItems = attachments.map(file => {
+        //         const size = formatFileSize(file.size || 0);
+        //         return `
+        //         <li>
+        //             <a href="${file.url}" download="${file.name}">
+        //             📎 ${file.name} <span style="color:gray; font-size: 0.9em;">(${size})</span>
+        //             </a>
+        //         </li>
+        //         `;
+        //     }).join('');
+        //     fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
+        //     }
         // })
         // .catch(error => {
         //     console.error('데이터 로드 실패:', error);
@@ -466,14 +447,14 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
             <div id="bo_v_file"></div>
         </div>
 	    <!-- <ul class="v_page">
-                <li><span><i class="fa fa-angle-down"></i></span><a href="./board_table18&wr_id=46.html">한국지배구조원 ESG 평가서 'A' 등급</a></li>    </ul>
+                <li><span><i class="fa fa-angle-down"></i></span><a href="./board_table19&wr_id=46.html">한국지배구조원 ESG 평가서 'A' 등급</a></li>    </ul>
      -->
     <div class="btn_area">
                 <ul class="left">
                     <li><button class="btn_line" onclick="goToSaramin()">사람인 바로가기</button></li>
                             </ul>
         <ul class="right">
-            <li><a href="./board_table18.html" class="btn_line"> 목록</a></li>
+            <li><a href="./board_table19.html" class="btn_line"> 목록</a></li>
 			                    </ul>
             </div>
     
