@@ -1,70 +1,128 @@
-// pagination.js
 export function initPagination({
     data = [],
     containerSelector = '.test_list',
     paginationSelector = '.pagination',
     itemsPerPage = 5,
+    pageGroupSize = 5,
     renderItem = () => '',
-  }) {
-    let currentPage = 1;
+    defaultPage = 1,
+    useLocalStorage = false,
+    localStorageKey = 'lastPage'
+}) {
     const totalPages = Math.ceil(data.length / itemsPerPage);
   
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlPage = parseInt(urlParams.get('page'));
+    const storedPage = useLocalStorage ? parseInt(localStorage.getItem(localStorageKey)) : null;
+  
+    let currentPage = urlPage || storedPage || defaultPage;
+  
+    function updateURL(page) {
+        const url = new URL(window.location);
+        url.searchParams.set('page', page);
+        history.replaceState(null, '', url.toString());
+    
+        if (useLocalStorage) {
+            localStorage.setItem(localStorageKey, page);
+        }
+    }
+  
     function renderList() {
-      const start = (currentPage - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const items = data.slice(start, end);
-      const $container = document.querySelector(containerSelector);
-      $container.innerHTML = items.map(renderItem).join('');
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        document.querySelector(containerSelector).innerHTML =
+        data.slice(start, end).map(renderItem).join('');
     }
   
     function renderPagination() {
-      const $pagination = document.querySelector(paginationSelector);
-      $pagination.innerHTML = '';
-  
-      // Prev button
-      const prev = document.createElement('li');
-      prev.innerHTML = '&laquo;';
-      prev.className = currentPage === 1 ? 'disabled' : '';
-      prev.style.cursor = 'pointer';
-      prev.onclick = () => {
+        const $pagination = document.querySelector(paginationSelector);
+        $pagination.innerHTML = '';
+
+        const currentGroup = Math.floor((currentPage - 1) / pageGroupSize);
+        const startPage = currentGroup * pageGroupSize + 1;
+        const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+
+        // 맨앞 ««
+        const firstBtn = document.createElement('li');
+        firstBtn.innerHTML = '&laquo;&laquo;';
+        firstBtn.style.cursor = 'pointer';
         if (currentPage > 1) {
-          currentPage--;
-          renderList();
-          renderPagination();
+            firstBtn.onclick = () => {
+            currentPage = 1;
+            updateURL(currentPage);
+            renderList();
+            renderPagination();
+            };
+        } else {
+            firstBtn.className = 'disabled';
         }
-      };
-      $pagination.appendChild(prev);
-  
-      // Page numbers
-      for (let i = 1; i <= totalPages; i++) {
-        const li = document.createElement('li');
-        li.textContent = i;
-        li.className = (i === currentPage) ? 'active' : '';
-        li.style.cursor = 'pointer';
-        li.onclick = () => {
-          currentPage = i;
-          renderList();
-          renderPagination();
-        };
-        $pagination.appendChild(li);
-      }
-  
-      // Next button
-      const next = document.createElement('li');
-      next.innerHTML = '&raquo;';
-      next.className = currentPage === totalPages ? 'disabled' : '';
-      next.style.cursor = 'pointer';
-      next.onclick = () => {
+        $pagination.appendChild(firstBtn);
+
+        // 이전 그룹 «
+        const prevGroupBtn = document.createElement('li');
+        prevGroupBtn.innerHTML = '&laquo;';
+        prevGroupBtn.style.cursor = 'pointer';
+        if (startPage > 1) {
+            prevGroupBtn.onclick = () => {
+            currentPage = startPage - 1;
+            updateURL(currentPage);
+            renderList();
+            renderPagination();
+            };
+        } else {
+            prevGroupBtn.className = 'disabled';
+        }
+        $pagination.appendChild(prevGroupBtn);
+
+        // 페이지 번호
+        for (let i = startPage; i <= endPage; i++) {
+            const li = document.createElement('li');
+            li.textContent = i;
+            li.className = (i === currentPage) ? 'active' : '';
+            li.style.cursor = 'pointer';
+            li.onclick = () => {
+            currentPage = i;
+            updateURL(currentPage);
+            renderList();
+            renderPagination();
+            };
+            $pagination.appendChild(li);
+        }
+
+        // 다음 그룹 »
+        const nextGroupBtn = document.createElement('li');
+        nextGroupBtn.innerHTML = '&raquo;';
+        nextGroupBtn.style.cursor = 'pointer';
+        if (endPage < totalPages) {
+            nextGroupBtn.onclick = () => {
+            currentPage = endPage + 1;
+            updateURL(currentPage);
+            renderList();
+            renderPagination();
+            };
+        } else {
+            nextGroupBtn.className = 'disabled';
+        }
+        $pagination.appendChild(nextGroupBtn);
+
+        // 맨끝 »»
+        const lastBtn = document.createElement('li');
+        lastBtn.innerHTML = '&raquo;&raquo;';
+        lastBtn.style.cursor = 'pointer';
         if (currentPage < totalPages) {
-          currentPage++;
-          renderList();
-          renderPagination();
+            lastBtn.onclick = () => {
+            currentPage = totalPages;
+            updateURL(currentPage);
+            renderList();
+            renderPagination();
+            };
+        } else {
+            lastBtn.className = 'disabled';
         }
-      };
-      $pagination.appendChild(next);
+        $pagination.appendChild(lastBtn);
     }
   
     renderList();
     renderPagination();
-  }
+}
   

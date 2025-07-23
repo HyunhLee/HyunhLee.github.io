@@ -195,16 +195,6 @@ var g5_cookie_domain = "";
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->    
 
-<!-- pagination -->
-<script>
-    const itemsPerPage = 3;
-    let currentPage = 1;
-    const totalPages = Math.ceil(test.length / itemsPerPage);
-
-    renderList(currentPage);
-    renderPagination();
-</script>
-
 <!-- 100% 배경이미지 때문에 사용 -->
 <div id="sh_wrapper">
 
@@ -420,6 +410,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 containerSelector: '.test_list',
                                 paginationSelector: '.pagination',
                                 itemsPerPage: 10,
+                                pageGroupSize: 5,
+                                useLocalStorage: true,
+                                localStorageKey: 'lastPage-table35',
                                 renderItem: (data) => `
                                     <tr>
                                     <td style="text-align: center;">${data.no}</td>
@@ -460,9 +453,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                         
                 <div class="btn_area">
-                    <ul class="adm_btns">
-                                                                    </ul>
-                            </div>
+                    <ul class="adm_btns"></ul>
+                </div>
         
             </form>
         
