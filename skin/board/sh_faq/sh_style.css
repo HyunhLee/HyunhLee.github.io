@@ -36,6 +36,8 @@ a.btn_line{display:inline-block;vertical-align:top;width:75px;height:55px;border
 .pg_start:hover, .pg_end:hover{background-color:#f6f6f6}
 
 /* 테이블 공통 */
+#sh_list_tbl th{height:60px} 
+#sh_list_tbl td{height:60px}
 .sh_tbl_common{width:100%;border-top:1px solid #555}
 .sh_tbl_common table{width:100%}
 .sh_tbl_common th{border-bottom:1px solid #e1e1e1;font-size:15px;font-weight:normal;color:#222;font-family:'notokr-medium'} 
