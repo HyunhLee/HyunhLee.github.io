@@ -44,7 +44,7 @@ export function initPagination({
 
         // 맨앞 ««
         const firstBtn = document.createElement('li');
-        firstBtn.innerHTML = '&laquo;&laquo;';
+        firstBtn.innerHTML = '<img src="/img/btn_first.gif" alt="맨앞으로" />';
         firstBtn.style.cursor = 'pointer';
         if (currentPage > 1) {
             firstBtn.onclick = () => {
@@ -60,7 +60,7 @@ export function initPagination({
 
         // 이전 그룹 «
         const prevGroupBtn = document.createElement('li');
-        prevGroupBtn.innerHTML = '&laquo;';
+        prevGroupBtn.innerHTML = '<img src="/img/btn_prev.gif" alt="앞으로" />';
         prevGroupBtn.style.cursor = 'pointer';
         if (startPage > 1) {
             prevGroupBtn.onclick = () => {
@@ -91,7 +91,7 @@ export function initPagination({
 
         // 다음 그룹 »
         const nextGroupBtn = document.createElement('li');
-        nextGroupBtn.innerHTML = '&raquo;';
+        nextGroupBtn.innerHTML = '<img src="/img/btn_next.gif" alt="뒤로" />';
         nextGroupBtn.style.cursor = 'pointer';
         if (endPage < totalPages) {
             nextGroupBtn.onclick = () => {
@@ -107,7 +107,7 @@ export function initPagination({
 
         // 맨끝 »»
         const lastBtn = document.createElement('li');
-        lastBtn.innerHTML = '&raquo;&raquo;';
+        lastBtn.innerHTML = '<img src="/img/btn_end.gif" alt="맨뒤로" />';
         lastBtn.style.cursor = 'pointer';
         if (currentPage < totalPages) {
             lastBtn.onclick = () => {
