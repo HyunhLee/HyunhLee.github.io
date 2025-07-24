@@ -241,8 +241,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-        //     axios.get('https://api-tony-dev.balhea.kr/bidlist/ongoing')
-        //     .then(response => {
+            axios.get('https://api.kcisa.kr/openapi/service/rest/meta5/getKFCC0502')
+            .then(response => {
+                console.log('response', response)
         //         // const { images, text, attachments } = response.data;
             const params = getQueryParams();
             document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
@@ -291,10 +292,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }).join('');
                 fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
                 }
-        //     })
-        //     .catch(error => {
-        //         console.error('데이터 로드 실패:', error);
-        //     });
+            })
+            .catch(error => {
+                console.error('데이터 로드 실패:', error);
+            });
         });
     </script>
     
