@@ -241,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            axios.get('https://api.kcisa.kr/openapi/service/rest/meta5/getKFCC0502?016dd526-7439-4a53-a017-d6be190c2d97')
+            axios.get(`https://api.kcisa.kr/openapi/service/rest/meta5/getKFCC0502?${encodeURIComponent('serviceKey')}=016dd526-7439-4a53-a017-d6be190c2d97`)
             .then(response => {
                 console.log('response', response)
         //         // const { images, text, attachments } = response.data;
