@@ -244,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        axios.get(`http://localhost:8080/homebe-test/post/notice`)
+        axios.get(`http://10.52.40.30:9090/homebe/post/recruit`)
         .then(response => {
             console.log('response', response)
             const { images, text, attachments } = response.data;
