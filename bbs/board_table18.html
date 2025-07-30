@@ -196,6 +196,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->    
 
 <script>
+    import { initPagination } from '/js/pagination.js';
+
     function escapeHTML(str) {
         return str
             .replace(/&/g, '&amp;')
@@ -233,8 +235,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 "totalPages": 1
             };
         // const params = getQueryParams();
-        document.querySelector("#sh_bo_v .tit").textContent = `${data.content.hr_title} (${data.content.hr_status})`;
-        document.getElementById('date').insertAdjacentHTML('afterend', `${data.content.hr_create_dt}`);
+        // document.querySelector("#sh_bo_v .tit").textContent = `${data.content.hr_title} (${data.content.hr_status})`;
+        // document.getElementById('date').insertAdjacentHTML('afterend', `${data.content.hr_create_dt}`);
+        initPagination({
+            data: data.content,
+            containerSelector: '.test_list',
+            paginationSelector: '.pagination',
+            itemsPerPage: 10,
+            pageGroupSize: 5,
+            useLocalStorage: true,
+            localStorageKey: 'lastPage-table18',
+            renderItem: (data) => `
+                <tr>
+                <td style="text-align: center;">${data.hr_post_sn}</td>
+                <td style="padding: 10px 20px;"><a href="/bbs/board_table18_detail.html?param1=${data.hr_post_sn}&param2=${data.hr_title}&param3=${data.hr_post_url}&param4=${data.hr_status}&param5=${data.hr_create_dt}&body1=${data.body1}&body2=${data.body2}&body3=${data.body3}&body4=${data.body4}">${data.title} (${data.end})</a></td>
+                <td style="text-align: center;">${data.hr_writer_sn}</td>
+                <td style="text-align: center;">${data.hr_create_dt}</td>
+                </tr>
+            `
+        });
         // })
         // .catch(error => {
         //     console.error('데이터 로드 실패:', error);
@@ -431,13 +450,8 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
         <input type="hidden" name="page" value="1">
         <input type="hidden" name="sw" value="">
             
-        <div id="faq_wrap" class="sh_tbl_common">
-            <div class="cont_faq" style="display: flex;justify-content: center;">
-                <span class="num">
-                </span>
-                <p>서비스 준비 중 입니다.</p>
-            </div>
-            <!-- <table cellpadding="0" cellspacing="0">
+        <div id="sh_list_tbl" class="sh_tbl_common">
+            <table cellpadding="0" cellspacing="0">
                 <caption class="sound_only">채용 목록</caption>
                 <thead>
                     <tr>
@@ -449,8 +463,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                 </thead>
                 <tbody class="test_list"></tbody>
 
-                <script type="module">
-                    import { initPagination } from '/js/pagination.js';
+                <!-- <script type="module">
                     import axios from 'https://cdn.jsdelivr.net/npm/axios@1.6.8/+esm';
                   
                     const test = [
@@ -461,23 +474,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                         { id: "관리자", title: "AI 기반 시스템 개발 프론트엔드 채용", no: 1, url: 'https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=NjlIand4MmhBclc2c0JtTmF4bGtEUT09', end: '마감', body1: "- AI 플랫폼(프론트엔드) 개발 및 운영<br />- API 연동 및 비동기 데이터 처리<br />- 반응형 웹 개발 및 크로스브라우징 최적화<br />", body2: "- 3년 이상의 프론트엔드 개발 경험을 보유하신 분<br />- javascript(또는 Typescript)를 잘 이해하고 개발할 수 있는 분<br />- HTML/CSS에 대한 이해와 활용이 가능하신 분<br />", body3: "- 화면 정보 구조 설계 및 UX/UI 디자인에 관심이 있으신 분<br />- 재사용성 높은 UI 컴포넌트 개발 및 운영 경험이 있으신 분<br />- REST API, GraphQL 등 다양한 인터페이스 사용 경험이 있으신 분<br />- AWS/GCP 등 Cloud 환경에서 개발 및 배포 경험이 있으신 분<br />- 컴퓨터 공학, 소프트웨어 공학 등 관련학과 졸업자<br />", body4: "- 주요 기술 : Spring Boot, Nginx, Kubernetes(k8s)<br />- 사용 언어 : Node.js/Typescript/React/Java/Kotlin 등<br />- 업무 도구 : Github, Confluence(wiki), Jira, Slack<br />", date: "2025-02-01" }
                     ];
 
-                    initPagination({
-                        data: test,
-                        containerSelector: '.test_list',
-                        paginationSelector: '.pagination',
-                        itemsPerPage: 10,
-                        pageGroupSize: 5,
-                        useLocalStorage: true,
-                        localStorageKey: 'lastPage-table18',
-                        renderItem: (data) => `
-                            <tr>
-                            <td style="text-align: center;">${data.no}</td>
-                            <td style="padding: 10px 20px;"><a href="/bbs/board_table18_detail.html?param1=${data.no}&param2=${data.title}&param3=${data.url}&param4=${data.end}&param5=${data.date}&body1=${data.body1}&body2=${data.body2}&body3=${data.body3}&body4=${data.body4}">${data.title} (${data.end})</a></td>
-                            <td style="text-align: center;">${data.id}</td>
-                            <td style="text-align: center;">${data.date}</td>
-                            </tr>
-                        `
-                    });
+                    
                 
                     // axios.get('/data/recruit.json')
                     // .then(response => {
@@ -501,8 +498,8 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                     // .catch(error => {
                     //     console.error('데이터 로딩 실패:', error);
                     // });
-                </script>
-            </table> -->
+                </script> -->
+            </table>
         </div>
         <div class="pagination-wrapper">
             <ul class="pagination"></ul>
