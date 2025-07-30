@@ -200,18 +200,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             return { param1 };
         }
 
-        // 페이지 로드 시 파라미터를 읽고 표시
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     const params = getQueryParams();
-        //     console.log(JSON.stringify(params.param3).length);
-        //     document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
-        //     document.getElementById('date').insertAdjacentHTML('afterend', `${params.param5}`);
-        //     document.getElementById('body1').innerHTML = `${params.body1}`;
-        //     document.getElementById('body2').innerHTML = `${params.body2}`;
-        //     document.getElementById('body3').innerHTML = `${params.body3}`;
-        //     document.getElementById('body4').innerHTML = `${params.body4}`;
-        // });
-
         function goToSaramin() {
             const params = getQueryParams();
             window.open("about:blank").location.href = `${params.param3}`;
@@ -234,10 +222,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
-            // axios.get(`https://api-dev.balhea.kr/homebe/post/notice/${params.param1}`)
-            // .then(response => {
-            //     console.log('response', response)
-            //     const { images, text, attachments } = response.data;
+            axios.get(`https://api-dev.balhea.kr/homebe/post/notice/${params.param1}`)
+            .then(response => {
+                document.querySelector("#sh_bo_v .tit").textContent = `${response.data.content.hr_title} (${response.data.content.hr_status})`;
+                document.getElementById('date').insertAdjacentHTML('afterend', `${response.data.content.hr_create_dt}`);
                 const data = {
                     "content": [
                         {
@@ -299,10 +287,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }).join('');
                 fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
                 }
-            // })
-            // .catch(error => {
-            //     console.error('데이터 로드 실패:', error);
-            // });
+            })
+            .catch(error => {
+                console.error('데이터 로드 실패:', error);
+            });
         });
     </script>
     

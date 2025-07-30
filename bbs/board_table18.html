@@ -417,28 +417,10 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                     }
 
                     document.addEventListener('DOMContentLoaded', function() {
-                        // axios.get(`https://api-dev.balhea.kr/homebe/post/notice`)
-                        // .then(response => {
-                            // const { images, text, attachments } = response.data;
-                            const data = {
-                                "content": [
-                                    {
-                                    "hr_post_sn": 1,
-                                    "hr_title": "AI 기반 시스템 개발 데이터엔지니어 채용",
-                                    "hr_writer_sn": "관리자",
-                                    "hr_post_url": "https://balhea.kr/",
-                                    "hr_status": "채용중",
-                                    "hr_create_dt": "2025-04-01",
-                                    "hr_view": 1
-                                    }
-                                ],
-                                "page": 0,
-                                "size": 10,
-                                "totalElements": 1,
-                                "totalPages": 1
-                            };
+                        axios.get(`https://api-dev.balhea.kr/homebe/post/notice`)
+                        .then(response => {
                             initPagination({
-                                data: data.content,
+                                data: response.data.content,
                                 containerSelector: '.test_list',
                                 paginationSelector: '.pagination',
                                 itemsPerPage: 10,
@@ -454,10 +436,10 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                                     </tr>
                                 `
                             });
-                        // })
-                        // .catch(error => {
-                        //     console.error('데이터 로드 실패:', error);
-                        // });
+                        })
+                        .catch(error => {
+                            console.error('데이터 로드 실패:', error);
+                        });
                     });
                 </script>
             </table>
