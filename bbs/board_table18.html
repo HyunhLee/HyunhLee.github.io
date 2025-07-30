@@ -244,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        axios.get(`https://thingproxy.freeboard.io/fetch/https://api-dev.balhea.kr/homebe/post/recruit`)
+        axios.get(`/homebe/post/recruit`)
         .then(response => {
             console.log('response', response)
             const { images, text, attachments } = response.data;
