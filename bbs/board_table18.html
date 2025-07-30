@@ -503,9 +503,6 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                             "totalElements": 1,
                             "totalPages": 1
                         };
-                        // const params = getQueryParams();
-                        // document.querySelector("#sh_bo_v .tit").textContent = `${data.content.hr_title} (${data.content.hr_status})`;
-                        // document.getElementById('date').insertAdjacentHTML('afterend', `${data.content.hr_create_dt}`);
                         initPagination({
                             data: data.content,
                             containerSelector: '.test_list',
@@ -517,7 +514,7 @@ $('#subBnr .txt_area').stop().delay(0).animate({"opacity":"1","padding-top":"0"}
                             renderItem: (data) => `
                                 <tr>
                                 <td style="text-align: center;">${data.hr_post_sn}</td>
-                                <td style="padding: 10px 20px;"><a href="/bbs/board_table18_detail.html?param1=${data.hr_post_sn}&param2=${data.hr_title}&param3=${data.hr_post_url}&param4=${data.hr_status}&param5=${data.hr_create_dt}&body1=${data.body1}&body2=${data.body2}&body3=${data.body3}&body4=${data.body4}">${data.hr_title} (${data.hr_status})</a></td>
+                                <td style="padding: 10px 20px;"><a href="/bbs/board_table18_detail.html?param1=${data.hr_post_sn}">${data.hr_title} (${data.hr_status})</a></td>
                                 <td style="text-align: center;">${data.hr_writer_sn}</td>
                                 <td style="text-align: center;">${data.hr_create_dt}</td>
                                 </tr>

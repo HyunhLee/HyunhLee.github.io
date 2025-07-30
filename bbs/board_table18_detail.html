@@ -197,15 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         function getQueryParams() {
             const params = new URLSearchParams(window.location.search);
             const param1 = params.get('param1'); // param1 값을 가져옴
-            const param2 = params.get('param2'); // param2 값을 가져옴
-            const param3 = params.get('param3'); // param3 값을 가져옴
-            const param4 = params.get('param4'); // param4 값을 가져옴
-            const param5 = params.get('param5'); // param5 값을 가져옴
-            const body1 = params.get('body1'); // body1 값을 가져옴
-            const body2 = params.get('body2'); // body2 값을 가져옴
-            const body3 = params.get('body3'); // body3 값을 가져옴
-            const body4 = params.get('body4'); // body4 값을 가져옴
-            return { param1, param2, param3, param4, param5, body1, body2, body3, body4  };
+            return { param1 };
         }
 
         // 페이지 로드 시 파라미터를 읽고 표시
@@ -241,13 +233,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // axios.get(`http://localhost:8080/homebe-test/post/notice`)
-            // .then(response => {
-            //     console.log('response', response)
-            //     const { images, text, attachments } = response.data;
             const params = getQueryParams();
-            document.querySelector("#sh_bo_v .tit").textContent = `${params.param2} (${params.param4})`;
-            document.getElementById('date').insertAdjacentHTML('afterend', `${params.param5}`);
+            axios.get(`https://api-dev.balhea.kr/homebe/post/notice/${params.param1}`)
+            .then(response => {
+                console.log('response', response)
+            //     const { images, text, attachments } = response.data;
+                const data = {
+                    "content": [
+                        {
+                        "hr_post_sn": 1,
+                        "hr_title": "AI 기반 시스템 개발 데이터엔지니어 채용",
+                        "hr_writer_sn": "관리자",
+                        "hr_post_url": "https://balhea.kr/",
+                        "hr_status": "채용중",
+                        "hr_create_dt": "2025-04-01",
+                        "hr_view": 1
+                        }
+                    ],
+                    "page": 0,
+                    "size": 10,
+                    "totalElements": 1,
+                    "totalPages": 1
+                };
                 const {images, text, attachments} = {
                     "images": [
                         "/sh_img/include/inc02/img/71238.jpg",
@@ -292,10 +299,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }).join('');
                 fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
                 }
-            // })
-            // .catch(error => {
-            //     console.error('데이터 로드 실패:', error);
-            // });
+            })
+            .catch(error => {
+                console.error('데이터 로드 실패:', error);
+            });
         });
     </script>
     
