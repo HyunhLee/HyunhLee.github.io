@@ -234,9 +234,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         document.addEventListener('DOMContentLoaded', function() {
             const params = getQueryParams();
-            axios.get(`https://api-dev.balhea.kr/homebe/post/notice/${params.param1}`)
-            .then(response => {
-                console.log('response', response)
+            // axios.get(`https://api-dev.balhea.kr/homebe/post/notice/${params.param1}`)
+            // .then(response => {
+            //     console.log('response', response)
             //     const { images, text, attachments } = response.data;
                 const data = {
                     "content": [
@@ -299,10 +299,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }).join('');
                 fileBox.innerHTML = `<h4>첨부파일</h4><ul>${listItems}</ul>`;
                 }
-            })
-            .catch(error => {
-                console.error('데이터 로드 실패:', error);
-            });
+            // })
+            // .catch(error => {
+            //     console.error('데이터 로드 실패:', error);
+            // });
         });
     </script>
     
